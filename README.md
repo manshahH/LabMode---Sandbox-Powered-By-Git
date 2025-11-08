@@ -94,14 +94,14 @@ This extension does not require any configuration. It works out of the box!
 
 ## 🤝 Contributing
 
-Found a bug or have a feature request? Please open an issue on our [GitHub repository](https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git).
+Found a bug or have a feature request? Please open an issue on our [GitHub repository](https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git/issues).
 
 ## 📄 License
 
-This extension is licensed under the [MIT License](LICENSE).
+This extension is licensed under the [MIT License](https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git/blob/main/LICENSE).
 
 ---
 
-**Enjoy safe experimentation with GitBox!** 🎉
+**Enjoy safe experimentation with LabMode!** 🧪
 
 If you find this extension helpful, please consider giving it a ⭐ rating!

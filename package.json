@@ -1,0 +1,92 @@
+{
+  "name": "labmode",
+  "displayName": "LabMode",
+  "description": "LabMode: Sandbox powered by Git - Safely experiment with code changes using git stash and branching",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "git",
+    "sandbox",
+    "experiment",
+    "branch",
+    "stash",
+    "test",
+    "development",
+    "labmode",
+    "lab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git/issues"
+  },
+  "homepage": "https://github.com/manshahH/LabMode---Sandbox-Powered-By-Git#readme",
+  "license": "MIT",
+  "icon": "icon.png",
+  "activationEvents": [
+    "onCommand:labmode.enterLabMode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "labmode.enterLabMode",
+        "title": "LabMode: Enter Lab Mode",
+        "category": "LabMode"
+      },
+      {
+        "command": "labmode.discardLab",
+        "title": "LabMode: Discard Lab",
+        "category": "LabMode"
+      },
+      {
+        "command": "labmode.keepLab",
+        "title": "LabMode: Keep Lab",
+        "category": "LabMode"
+      }
+    ],
+    "menus": {
+      "statusBar": [
+        {
+          "command": "labmode.enterLabMode",
+          "when": "!labmode.inLab",
+          "group": "labmode"
+        },
+        {
+          "command": "labmode.discardLab",
+          "when": "labmode.inLab",
+          "group": "labmode"
+        },
+        {
+          "command": "labmode.keepLab",
+          "when": "labmode.inLab",
+          "group": "labmode"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.3"
+  }
+}
